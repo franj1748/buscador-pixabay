@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="shortcut icon" href="src/img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Buscador de imágenes de Pixabay</title>
+</head>
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">Acerca de</h4>
+                    <p class="text-white">Un buscador de imágenes sencillo para encontrar recursos que puedes utilizar en tus proyectos sin preocuparte por el copyright, utilizando la API de Pixabay.</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contacto</h4>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="https://www.linkedin.com/in/francisco-elis-24506b209">Linkedin</a></li>
+                        <li><a class="text-white" href="https://github.com/franj1748">GitHub</a></li>
+                        <li><a class="text-white" href="https://t.me/franciscoj1748">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ionicon" viewBox="0 0 512 512"><title>Buscador</title><path d="M432 112V96a48.14 48.14 0 00-48-48H64a48.14 48.14 0 00-48 48v256a48.14 48.14 0 0048 48h16" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="96" y="128" width="400" height="336" rx="45.99" ry="45.99" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><ellipse cx="372.92" cy="219.64" rx="30.77" ry="30.55" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path d="M342.15 372.17L255 285.78a30.93 30.93 0 00-42.18-1.21L96 387.64M265.23 464l118.59-117.73a31 31 0 0141.46-1.87L496 402.91" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                    <strong class="mx-2">Buscador de imágenes</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="py-4 text-center container">
+            <div class="row py-lg-2">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Buscador de imágenes de Pixabay</h1>
+                    <p class="lead text-muted">Pixabay es una comunidad vibrante de creativos que comparten imágenes, ilustraciones, videos y música libres de regalías. Todos los contenidos se publican bajo la licencia de Pixabay, lo que los hace seguros para su uso sin atribución, incluso con fines comerciales.</p>
+                    <form id="formulario">
+                        <div class="">
+                            <div class="input-group input-group-lg mb-3">
+                                <input type="text" class="form-control" id="busqueda" placeholder="Término de búsqueda: Café, Flores, etc..." aria-describedby="button-addon2">
+                                <button type="submit" class="btn btn-outline-secondary" style="font-size: 25px;" type="button" id="button-addon2"><ion-icon name="search"></ion-icon></button>
+                            </div>                          
+                            <div id="ayuda" class="form-text">Cualquier término está bien, sólo no seas demasiado creativo.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="album py-2">
+            <div class="container">
+                <span id="total" class="badge visually-hidden bg-secondary py-2 d-table mb-2"></span>
+                <span class="badge visually-hidden bg-secondary py-2 mb-2"></span>
+                <div id="contenedorResultado" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"></div>
+                <nav aria-label="Page navigation" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <div class="up">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+    </div>
+    <footer id="footer" class="mt-auto mb-3 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017–2022 Acceso Web</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="src/js/app.js"></script>
+    <script type="module" src="src/js/scroll-up.js"></script>
+</body>
+</html>
+
+
+<!-- <li class="page-item">
+    <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+    </a>
+</li>
+
+<li class="page-item">
+    <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+    </a>
+</li> -->
